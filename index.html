@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Pizzeria</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Fabiano's Pizzeria</a>
+              </div>
+              <ul class="nav navbar-nav">
+              </ul>
+            </div>
+          </nav>
+        <style>
+           body {
+ background-image: url("https://tinyurl.com/32e2rw2n");
+           } 
+        </style>
+        <div style="margin-top:100; margin-left:200; margin-right:200">
+            <p style="font-size:50; color:white">Fabiano's Pizzeria</p>
+        <button onclick="show()"><h3>Show Menu</h3></button>
+        <h3 style="display: none; color: white" id="menu">Neapolitan Pizza<br>Chicago Pizza<br>New York-Style Pizza</h3>
+        <script>
+            var menu = "Neapolitan Pizza<br>Chicago Pizza<br>New York-Style Pizza"
+
+            var x = document.getElementById("menu");
+
+            function show(){
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+            }
+
+            function enter(){
+                menu += ("<br>" + document.getElementById("suggestion").value)
+                x.innerHTML = menu
+            }
+        </script>
+       <br><br>
+       <button onclick="enter()"><h3>Send Suggestion</h3></button><br><br>
+       <input placeholder="Enter Suggestion" id="suggestion">
+    </div>
+    </body>
+</html>
